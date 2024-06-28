@@ -71,8 +71,28 @@
             margin: 0;
             font-size: 1em;
         }
+        #footer {
+            position: absolute;
+            bottom: 30px;
+            right: 10px;
+            background-color: rgba(226, 226, 226, 0.377);
+            color: #000000;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+        #footer a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #footer a:hover {
+            text-decoration: underline;
+        }
     </style>
-    <title>Map Viewer</title>
+    <title>WRAP Map Viewer</title>
 </head>
 <body>
     <div id="map">
@@ -90,6 +110,10 @@
             <h2>THE WALLINGFORD PROCEDURE</h2>
             <h2>Volume 3. Maps</h2>
             <h2>Winter rain acceptance potential</h2>
+        </div>
+        <div id="footer">
+            <p>Check out <a href="https://obermajer.co.uk" target="_blank">obermajer.co.uk</a> for more</p>
+            <p>GitHub Repo: <a href="https://github.com/Patryk-Obermajer/WRAP-Web-Map" target="_blank">WRAP-Web-Map</a></p>
         </div>
     </div>
     <script src="./resources/qgis2web_expressions.js"></script>
