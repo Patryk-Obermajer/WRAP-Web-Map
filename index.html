@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, user-scalable=no, maximum-scale=1, width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="./resources/ol.css">
+    <link rel="stylesheet" href="./resources/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./resources/ol-geocoder.min.css">
+    <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+    <link rel="stylesheet" href="./resources/qgis2web.css">
+    <style>
+        html, body {
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .ol-control > * {
+            background-color: #f8f8f8 !important;
+            color: #444 !important;
+            border-radius: 0;
+        }
+        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder {
+            color: #444 !important;
+        }
+        .search-layer-input-search {
+            background-color: #f8f8f8 !important;
+        }
+        .ol-control > *:focus, .ol-control > *:hover {
+            background-color: rgba(248, 248, 248, 0.7) !important;
+        }
+        .ol-control {
+            background-color: rgba(255, 255, 255, 0.4) !important;
+            padding: 2px !important;
+        }
+        #map {
+            width: 100%;
+            height: 100vh;
+        }
+        #opacity-control {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+        #header {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            text-align: center;
+            z-index: 1000;
+        }
+        #header h1 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        #header h2 {
+            margin: 0;
+            font-size: 1em;
+        }
+    </style>
+    <title>Map Viewer</title>
+</head>
+<body>
+    <div id="map">
+        <div id="popup" class="ol-popup">
+            <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+            <div id="popup-content"></div>
+        </div>
+        <div id="opacity-control">
+            <label for="opacity-input">Layer Opacity</label>
+            <input id="opacity-input" type="range" min="0" max="1" step="0.01" value="0.8" />
+            <span id="opacity-output"></span>
+        </div>
+        <div id="header">
+            <h1>Design and analysis of urban storm drainage</h1>
+            <h2>THE WALLINGFORD PROCEDURE</h2>
+            <h2>Volume 3. Maps</h2>
+            <h2>Winter rain acceptance potential</h2>
+        </div>
+    </div>
+    <script src="./resources/qgis2web_expressions.js"></script>
+    <script src="./resources/polyfills.js"></script>
+    <script src="./resources/functions.js"></script>
+    <script src="./resources/ol.js"></script>
+    <script src="./resources/ol-layerswitcher.js"></script>
+    <script src="./resources/ol-geocoder.js"></script>
+    <script src="./layers/WinterRainAcceptancePotential_1.js"></script>
+    <script src="./styles/WinterRainAcceptancePotential_1_style.js"></script>
+    <script src="./layers/layers.js"></script>
+    <script src="./resources/Autolinker.min.js"></script>
+    <script src="./resources/qgis2web.js"></script>
+</body>
+</html>
