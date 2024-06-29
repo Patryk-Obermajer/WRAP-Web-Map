@@ -91,6 +91,36 @@
         #footer a:hover {
             text-decoration: underline;
         }
+        #mobile-footer {
+            position: absolute;
+            bottom: 30px;
+            right: 10px;
+            background-color: rgba(226, 226, 226, 0.377);
+            color: #000000;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+        #mobile-footer a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #mobile-footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 900px) {
+            #header, #footer {
+                display: none;
+            }
+        }
+        @media (min-width: 900px) {
+            #mobile-footer {
+                display: none;
+            }
+        }
     </style>
     <title>WRAP Map Viewer</title>
 </head>
@@ -114,6 +144,9 @@
         <div id="footer">
             <p>Check out <a href="https://obermajer.co.uk" target="_blank">obermajer.co.uk</a> for more</p>
             <p>GitHub Repo: <a href="https://github.com/Patryk-Obermajer/WRAP-Web-Map" target="_blank">WRAP-Web-Map</a></p>
+        </div>
+        <div id="mobile-footer">
+            <p>For more, visit<br><a href="https://obermajer.co.uk" target="_blank">obermajer.co.uk</a></p>
         </div>
     </div>
     <script src="./resources/qgis2web_expressions.js"></script>
